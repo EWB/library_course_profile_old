@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Library Course Profile feature.
+ */
+
+include_once 'library_course_profile.features.inc';
