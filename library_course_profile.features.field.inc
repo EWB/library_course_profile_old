@@ -70,7 +70,7 @@ function library_course_profile_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -170,7 +170,7 @@ function library_course_profile_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -242,7 +242,7 @@ function library_course_profile_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -266,7 +266,7 @@ function library_course_profile_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -392,7 +392,7 @@ Prof.',
             'output' => 'default',
           ),
           'type' => 'name_formatter',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -451,7 +451,7 @@ Prof.',
         'module' => 'name',
         'settings' => array(),
         'type' => 'name_widget',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -501,7 +501,7 @@ Prof.',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 6,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -527,14 +527,14 @@ Prof.',
     ),
   );
 
-  // Exported field: 'node-base_course_profile-field_course_subjects'.
-  $fields['node-base_course_profile-field_course_subjects'] = array(
+  // Exported field: 'node-base_course_profile-field_subjects'.
+  $fields['node-base_course_profile-field_subjects'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_course_subjects',
+      'field_name' => 'field_subjects',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -572,7 +572,7 @@ Prof.',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 5,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -582,7 +582,7 @@ Prof.',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_course_subjects',
+      'field_name' => 'field_subjects',
       'label' => 'Subjects',
       'required' => 0,
       'settings' => array(
@@ -593,7 +593,7 @@ Prof.',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '1',
+        'weight' => '3',
       ),
     ),
   );

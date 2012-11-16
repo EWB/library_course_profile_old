@@ -77,8 +77,8 @@ function library_course_profile_field_group_info() {
     'label' => 'Tabs',
     'weight' => '5',
     'children' => array(
-      0 => 'group_course_db_tab',
-      1 => 'group_course_citation_guide_tab',
+      0 => 'group_course_citation_guide_tab',
+      1 => 'group_course_db_tab',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

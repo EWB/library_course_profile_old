@@ -83,11 +83,17 @@ function library_course_profile_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
           'weight' => '0',
+        ),
+        'metatags' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(),
