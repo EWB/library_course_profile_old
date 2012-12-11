@@ -34,21 +34,20 @@ function library_course_profile_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'handler' => 'views',
+        'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
-            'test_field_behavior' => array(
-              'status' => 0,
-              'test_field' => 0,
-            ),
             'views-select-list' => array(
               'status' => 0,
             ),
           ),
-          'view' => array(
-            'args' => array(),
-            'display_name' => 'entityreference_1',
-            'view_name' => 'library_picklist',
+          'sort' => array(
+            'direction' => 'ASC',
+            'property' => 'title',
+            'type' => 'property',
+          ),
+          'target_bundles' => array(
+            'base_library_database' => 'base_library_database',
           ),
         ),
         'handler_submit' => 'Change handler',
@@ -95,11 +94,7 @@ function library_course_profile_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'match_operator' => 'CONTAINS',
-          'path' => '',
-          'size' => '60',
-        ),
+        'settings' => array(),
         'type' => 'options_buttons',
         'weight' => '8',
       ),
@@ -167,7 +162,7 @@ function library_course_profile_field_default_fields() {
           'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => FALSE,
+            'link' => 1,
           ),
           'type' => 'entityreference_label',
           'weight' => '5',
@@ -275,7 +270,7 @@ function library_course_profile_field_default_fields() {
   $fields['node-base_course_profile-field_course_instructor'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_course_instructor',
@@ -456,6 +451,91 @@ Prof.',
     ),
   );
 
+  // Exported field: 'node-base_course_profile-field_course_readings'.
+  $fields['node-base_course_profile-field_course_readings'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_course_readings',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'direction' => 'ASC',
+            'field' => 'field_reading_reading_order:value',
+            'type' => 'field',
+          ),
+          'target_bundles' => array(
+            'course_reading' => 'course_reading',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'base_course_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'links' => 1,
+            'view_mode' => 'full',
+          ),
+          'type' => 'entityreference_entity_view',
+          'weight' => '6',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_course_readings',
+      'label' => 'Readings',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'node-base_course_profile-field_course_semester'.
   $fields['node-base_course_profile-field_course_semester'] = array(
     'field_config' => array(
@@ -604,6 +684,7 @@ Prof.',
   t('Course Code');
   t('Databases');
   t('Instructor');
+  t('Readings');
   t('Semester');
   t('Subjects');
   t('e.g. BIOL 101A');

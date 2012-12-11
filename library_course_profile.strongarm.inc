@@ -86,6 +86,9 @@ function library_course_profile_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -94,6 +97,9 @@ function library_course_profile_strongarm() {
         ),
         'metatags' => array(
           'weight' => '6',
+        ),
+        'path' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(),
