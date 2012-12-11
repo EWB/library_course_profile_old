@@ -455,7 +455,7 @@ Prof.',
   $fields['node-base_course_profile-field_course_readings'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_course_readings',
