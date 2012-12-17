@@ -69,7 +69,7 @@ function library_course_profile_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -78,12 +78,15 @@ function library_course_profile_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
       'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -94,6 +97,9 @@ function library_course_profile_strongarm() {
         ),
         'metatags' => array(
           'weight' => '6',
+        ),
+        'path' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(),
