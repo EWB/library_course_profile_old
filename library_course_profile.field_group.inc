@@ -148,6 +148,7 @@ function library_course_profile_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+<<<<<<< HEAD
   $field_group->identifier = 'group_course_picklist_tab|node|base_course_profile|full';
   $field_group->group_name = 'group_course_picklist_tab';
   $field_group->entity_type = 'node';
@@ -175,6 +176,8 @@ function library_course_profile_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+=======
+>>>>>>> c178a85bd6710afe34ee3ab1afc51313136e962f
   $field_group->identifier = 'group_course_readings|node|base_course_profile|form';
   $field_group->group_name = 'group_course_readings';
   $field_group->entity_type = 'node';
@@ -199,6 +202,7 @@ function library_course_profile_field_group_info() {
   );
   $export['group_course_readings|node|base_course_profile|form'] = $field_group;
 
+<<<<<<< HEAD
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
@@ -226,5 +230,7 @@ function library_course_profile_field_group_info() {
   );
   $export['group_course_readings|node|base_course_profile|full'] = $field_group;
 
+=======
+>>>>>>> c178a85bd6710afe34ee3ab1afc51313136e962f
   return $export;
 }

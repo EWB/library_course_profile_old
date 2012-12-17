@@ -592,6 +592,7 @@ Prof.',
           'type' => 'entityreference_entity_view',
           'weight' => '6',
         ),
+<<<<<<< HEAD
         'full' => array(
           'label' => 'above',
           'module' => 'entityreference',
@@ -608,6 +609,8 @@ Prof.',
           'type' => 'hidden',
           'weight' => '15',
         ),
+=======
+>>>>>>> c178a85bd6710afe34ee3ab1afc51313136e962f
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
